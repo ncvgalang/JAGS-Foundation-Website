@@ -1,17 +1,83 @@
 ---
-
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Juana Aguilar Galang Scholarship Foundation";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+	<p><i>Empowering Dreams Through Education</i></p>
+
+	<div>
+		<h2>Our Mission</h2>
+		<p>
+			The Juana Aguilar Galang Scholarship Foundation is based upon the conviction that
+			higher education is a right and not a privilege. The Foundation believes that
+			education is essential to a healthy, functioning, and equitable society. It is for
+			these reasons that the foundation aims to provide access to postsecondary education
+			to members of our community who otherwise would not have the financial means to
+			achieve their educational goals.
+		</p>
+	</div>
+
+	<div>
+		<h2>Our Vision</h2>
+		<p>
+			The Juana Aguilar Galang Scholarship Foundation sees higher education as an agent of
+			change for individuals, families, and communities. We envision a society where
+			underprivileged and marginalized youth - demonstrating resilience, steadfast ambition,
+			and making the most of their God-given ability - achieve their life's goals and become
+			productive citizens who will serve others in their community.
+		</p>
+	</div>
+
+	<div>
+		<h2>Our Objective</h2>
+		<p>
+			The Foundation awards scholarships to college students based on demonstrated academic
+			achievement, financial need, excellent personal character, and active involvement in
+			community service.
+		</p>
+		<p>
+			The Foundation aims to actively mentor current scholars and alumni to ensure both
+			college and post-college persistence and success. The Foundation believes we have a
+			critical role to play in guiding our scholars through the challenging times, and
+			providing support to their education beyond monetary assistance.
+		</p>
+	</div>
+
+	<div>
+		<h2>What We Provide</h2>
+		
+		<div>
+			<h3>Financial Support</h3>
+			<p>
+				Scholars receive Php 18,000 per semester, distributed in biweekly payments. This
+				support helps cover daily living expenses such as transportation, meals, school
+				supplies, and other essential needs so students can focus fully on their education.
+			</p>
+		</div>
+
+		<div>
+			<h3>Mentorship & Guidance</h3>
+			<p>
+				We pair scholars with dedicated mentors who provide academic guidance, career advice,
+				internship support, and regular check-ins throughout the school year.
+			</p>
+		</div>
+
+		<div>
+			<h3>Leadership & Community Service</h3>
+			<p>
+				Our scholars commit to school/community service each semester, developing strong
+				character, responsibility, and a heart for serving others.
+			</p>
+		</div>
+
+		<div>
+			<h3>Long-Term Commitment</h3>
+			<p>
+				We support our scholars beyond financial aid - walking alongside them through college
+				and preparing them for meaningful careers and community impact.
+			</p>
+		</div>
+	</div>
+</BaseLayout>
