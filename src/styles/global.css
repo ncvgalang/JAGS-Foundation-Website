@@ -89,8 +89,18 @@ textarea {
 	margin: 0;
 }
 
+.nav-list a {
+	color: #1f2937;
+	text-decoration: none;
+	font-weight: 500;
+}
+
+.nav-list a:hover {
+	color: #2563eb;   /* blue hover */
+}
+
 .nav-list a,
-.dropdown-toggle {
+.dropdown-btn {
 	text-decoration: none;
 	background: none;
 	border: none;
@@ -120,4 +130,54 @@ textarea {
 
 .dropdown.open .dropdown-menu {
 	display: block;
+}
+
+.contact-section {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-field label {
+  font-weight: 500;
+}
+
+.form-field input,
+.form-field textarea {
+  padding: 0.6rem 0.7rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.form-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.submit-button {
+  width: fit-content;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  background: #2563eb;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
+
+.submit-button:hover {
+  background: #1d4ed8;
 }

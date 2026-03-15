@@ -6,7 +6,7 @@
 
     <li class="dropdown">
         <button class="dropdown-btn">About Us</button>
-        <ul>
+        <ul class="dropdown-menu">
             <li><a href="/about-our-team/">Our Team</a></li>
             <li><a href="/about-juana/">Juana Aguilar Galang</a></li>
         </ul>
@@ -14,7 +14,7 @@
 
     <li class="dropdown">
         <button class="dropdown-btn">For Students</button>
-        <ul>
+        <ul class="dropdown-menu">
             <li><a href="/how-to-apply/">How To Apply</a></li>
             <li><a href="/service-hours/">Service Hours</a></li>
             <li><a href="/parents-involvement/">Parents' Involvement</a></li>
@@ -27,3 +27,33 @@
     <li><a href="/contact/">Contact</a></li>
     <li><a href="/donate/">Donate</a></li>
 </ul>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const dropdowns = document.querySelectorAll(".dropdown");
+
+        dropdowns.forEach(dropdown => {
+            const toggle = dropdown.querySelector(".dropdown-btn");
+
+            if (!toggle) return;
+
+            toggle.addEventListener("click", (e) => {
+                e.stopPropagation();
+
+                // close other dropdowns
+                dropdowns.forEach(d => {
+                    if (d !== dropdown) {
+                        d.classList.remove("open");
+                    }
+                });
+
+                dropdown.classList.toggle("open");
+            });
+        });
+
+        // close dropdowns if clicking anywhere else
+        document.addEventListener("click", () => {
+            dropdowns.forEach(d => d.classList.remove("open"));
+        });
+    });
+</script>
