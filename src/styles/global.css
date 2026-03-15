@@ -75,3 +75,49 @@ button {
 textarea {
 	min-height: 9rem;
 }
+
+.navbar {
+	background: white;
+	border-bottom: 1px solid #eee;
+}
+
+.nav-list {
+	display: flex;
+	gap: 24px;
+	list-style: none;
+	padding: 16px;
+	margin: 0;
+}
+
+.nav-list a,
+.dropdown-toggle {
+	text-decoration: none;
+	background: none;
+	border: none;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.dropdown {
+	position: relative;
+}
+
+.dropdown-menu {
+	position: absolute;
+	top: 120%;
+	left: 0;
+	display: none;
+	list-style: none;
+	padding: 10px;
+	background: white;
+	border: 1px solid #ddd;
+	min-width: 160px;
+}
+
+.dropdown-menu li {
+	padding: 6px 0;
+}
+
+.dropdown.open .dropdown-menu {
+	display: block;
+}
