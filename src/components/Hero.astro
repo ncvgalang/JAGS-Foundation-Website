@@ -1,0 +1,16 @@
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/jags_logo.png';
+
+const { pageTitle, heroImage, heroImageAlt } = Astro.props;
+---
+
+<div class="hero">
+    <Image src={logo} alt="" class="hero-logo" />
+
+    <h1 class="hero-title">{pageTitle}</h1>
+
+    <div class="hero-image-wrapper">
+        <Image src={heroImage} alt={heroImageAlt} class="hero-image"/>
+    </div>
+</div>

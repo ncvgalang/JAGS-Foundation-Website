@@ -1,17 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { Image } from 'astro:assets';
-import ina from '../assets/ina.JPEG';
+import heroImage from '../assets/ina.JPEG';
 
 const pageTitle = "Juana Aguilar Galang";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-	<Image
-		src={ina}
-		alt="Juana Aguilar Galang"
-		width=400
-	/>
+<BaseLayout pageTitle={pageTitle} heroImage={heroImage} heroImageAlt="Juana Aguilar Galang">
 	<p>(August 21, 1926 - June 14, 2016)</p>
 	<p>
 		Juana, more well known as "Ka Aning" in barangay San Juan, Hagonoy, Bulacan, was a dutiful

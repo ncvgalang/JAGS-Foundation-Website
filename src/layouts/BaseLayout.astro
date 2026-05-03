@@ -1,9 +1,10 @@
 ---
 import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
 import Footer from '../components/Footer.astro';
 import '../styles/global.css';
 
-const { pageTitle } = Astro.props;
+const { pageTitle, heroImage, heroImageAlt } = Astro.props;
 ---
 
 <html lang="en">
@@ -11,12 +12,11 @@ const { pageTitle } = Astro.props;
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;500;700&display=swap"
-			rel="stylesheet"
-		/>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
@@ -24,7 +24,7 @@ const { pageTitle } = Astro.props;
 	<body>
 		<Header />
 		<main class="page-content">
-			<h1>{pageTitle}</h1>
+			<Hero pageTitle={pageTitle} heroImage={heroImage} heroImageAlt={heroImageAlt} />
 			<slot />
 		</main>
 		<Footer />

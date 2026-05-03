@@ -1,9 +1,16 @@
 ---
 import Navigation from './Navigation.astro';
+import { Image } from 'astro:assets';
+import navbarLogo from '../assets/jags_logo.png'
 ---
 
 <header>
     <nav class="navbar">
         <Navigation />
     </nav>
+
+    <div class="logo-wrapper">
+        <Image src={navbarLogo} alt="" class="navbar-logo"/>
+    </div>
+
 </header>

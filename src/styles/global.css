@@ -1,42 +1,115 @@
 :root {
 	--content-width: 72ch;
-	--page-padding: 1.25rem;
+	--page-padding: 5rem;
 	--text-color: #1f2937;
+	--text-color: #473323;
 	--border-color: #d1d5db;
 }
 
-*,
+/* *,
 *::before,
 *::after {
 	box-sizing: border-box;
-}
+} */
 
 body {
 	margin: 0;
-	color: var(--text-color);
-	font-family: 'Gothic A1', 'Helvetica Neue', Arial, sans-serif;
-	line-height: 1.6;
+	/* color: var(--text-color); */
+	font-family: 'Montserrat';
+	/* line-height: 1.6; */
+	/* background-color: #6e8564; */
 }
 
-header,
+.hero {
+	color: white;
+	background-color: #6e8564;
+	height: 400px;
+	position: relative;
+
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 1rem;
+
+	overflow: hidden;
+	z-index: -1;
+}
+
+.hero-logo {
+	position: absolute;
+	top: 45%;
+	left: 20%;
+	transform: translate(-50%, -50%);
+	opacity: 0.2;
+	pointer-events: none;
+	width: 40vw;
+	height: auto;
+	z-index: 0;
+	height: 100%;
+	width: auto;
+}
+
+.hero-title {
+	flex: 0 1 auto;
+
+	font-weight: normal;
+	text-align: right;
+	font-size: clamp(2rem, 4vw, 4rem);
+	line-height: 1.1;
+
+	z-index: 1;
+}
+
+.hero-image-wrapper {
+	height: 100%;
+}
+
+.hero-image {
+	height: 100%;
+	width: auto;
+	object-fit: cover;
+	display: block;
+}
+
+.announcement-section {
+	display: flex;
+	gap: 2rem;
+	padding: 0 5rem;
+	background-color: #e3b936;
+	color: #626262;
+}
+
+.announcement-intro {
+	font-weight: bold;
+}
+
+/* header,
 footer,
 .page-content {
 	width: min(var(--content-width), calc(100% - (var(--page-padding) * 2)));
 	margin-inline: auto;
-}
+} */
 
-header,
+/* header,
 footer {
 	padding-block: 0.75rem;
-}
+} */
 
-header {
+/* header {
 	border-bottom: 1px solid var(--border-color);
-}
+} */
 
-footer {
+/* footer {
 	margin-top: 2rem;
 	border-top: 1px solid var(--border-color);
+} */
+
+header {
+	height: 70px;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 1rem;
 }
 
 nav,
@@ -46,66 +119,79 @@ footer {
 	flex-wrap: wrap;
 }
 
-main {
-	padding-block: 1.5rem 2rem;
-}
-
-p,
-li {
-	max-width: 70ch;
-}
-
-h1 {
-	line-height: 1.2;
-	margin-top: 0;
-}
-
-form {
-	display: grid;
-	gap: 0.75rem;
-	max-width: 42rem;
-}
-
-input,
-textarea,
-button {
-	font: inherit;
-}
-
-textarea {
-	min-height: 9rem;
+.logo-wrapper {
+	height: 100%;
 }
 
 .navbar {
-	background: white;
-	border-bottom: 1px solid #eee;
+	flex: 1;
 }
+
+.navbar-logo {
+	height: 100%;
+	width: auto;
+}
+
+/* main {
+	padding-block: 1.5rem 2rem;
+} */
+
+/* p,
+li {
+	max-width: 70ch;
+} */
+
+/* h1 {
+	line-height: 1.2;
+	margin-top: 0;
+} */
+
+/* form {
+	display: grid;
+	gap: 0.75rem;
+	max-width: 42rem;
+} */
+
+/* input,
+textarea,
+button {
+	font: inherit;
+} */
+
+/* textarea {
+	min-height: 9rem;
+} */
 
 .nav-list {
 	display: flex;
-	gap: 24px;
+	gap: 2rem;;
 	list-style: none;
-	padding: 16px;
+	padding: 20px;
 	margin: 0;
 }
 
 .nav-list a {
-	color: #1f2937;
+	color: black;
 	text-decoration: none;
-	font-weight: 500;
 }
 
-.nav-list a:hover {
-	color: #2563eb;   /* blue hover */
-}
-
-.nav-list a,
 .dropdown-btn {
+	color: black;
+	font-family: 'Montserrat';
 	text-decoration: none;
 	background: none;
 	border: none;
 	font-size: 16px;
 	cursor: pointer;
+	/* padding: 0; */
+}
+
+.nav-list a:hover {
+	color: #6e8564;
+}
+
+.dropdown-btn:hover {
+	color: #6e8564;
 }
 
 .dropdown {
@@ -121,6 +207,7 @@ textarea {
 	padding: 10px;
 	background: white;
 	border: 1px solid #ddd;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	min-width: 160px;
 }
 
@@ -180,4 +267,55 @@ textarea {
 
 .submit-button:hover {
   background: #1d4ed8;
+}
+
+/* Mission, Vision, Objective Section */
+
+.mvo-container {
+  display: flex;
+  gap: 3rem;
+  margin: 2rem 5rem;
+}
+
+.mvo-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  min-width: 120px;
+}
+
+.mvo-tab {
+	font-family: 'Montserrat';
+	font-size: 4ch;
+	border: none;
+	background: none;
+	color: #3f4d38;
+	cursor: pointer;
+	/* padding: 0.5rem 0.75rem;
+	border: 1px solid #d1d5db;
+	background: white;
+	cursor: pointer;
+	text-align: left;
+	border-radius: 6px; */
+}
+
+.mvo-tab.active {
+	font-weight: bold;
+}
+
+.mvo-content {
+  flex: 1;
+  font-size: 1.9ch;
+}
+
+.mvo-panel p {
+	margin: 0;
+}
+
+.mvo-panel {
+  display: none;
+}
+
+.mvo-panel.active {
+  display: block;
 }

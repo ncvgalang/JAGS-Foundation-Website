@@ -1,48 +1,89 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = "Juana Aguilar Galang Scholarship Foundation";
+import heroImage from '../assets/first_scholars.JPG';
+
+const pageTitle = "Juana Aguilar Galang Scholarship Program";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-	<p><i>Empowering Dreams Through Education</i></p>
+<BaseLayout pageTitle={pageTitle} heroImage={heroImage} heroImageAlt="First Scholars">
 
-	<div>
-		<h2>Our Mission</h2>
+	<div class="announcement-section">
+		<p class="announcement-intro">Announcement<br>May 3, 2026:</p>
 		<p>
-			The Juana Aguilar Galang Scholarship Foundation is based upon the conviction that
-			higher education is a right and not a privilege. The Foundation believes that
-			education is essential to a healthy, functioning, and equitable society. It is for
-			these reasons that the foundation aims to provide access to postsecondary education
-			to members of our community who otherwise would not have the financial means to
-			achieve their educational goals.
+			We are preparing for academic year 2026-2027! Watch out for scholarship application timelines via
+			this webpage and BulSU OSFAS Facebook page.
 		</p>
 	</div>
 
-	<div>
-		<h2>Our Vision</h2>
-		<p>
-			The Juana Aguilar Galang Scholarship Foundation sees higher education as an agent of
-			change for individuals, families, and communities. We envision a society where
-			underprivileged and marginalized youth - demonstrating resilience, steadfast ambition,
-			and making the most of their God-given ability - achieve their life's goals and become
-			productive citizens who will serve others in their community.
-		</p>
+	<div class="mission-vision-objective">
+		<div class="mvo-container">
+			<div class="mvo-tabs">
+				<button class="mvo-tab active" data-target="mission">MISSION</button>
+				<button class="mvo-tab" data-target="vision">VISION</button>
+				<button class="mvo-tab" data-target="objective">OBJECTIVE</button>
+			</div>
+
+			<div class="mvo-content">
+				<div class="mvo-panel active" id="mission">
+					<p>
+						The Juana Aguilar Galang Scholarship Foundation is based upon the conviction that
+						higher education is a right and not a privilege. The Foundation believes that
+						education is essential to a healthy, functioning, and equitable society. It is for
+						these reasons that the foundation aims to provide access to postsecondary education
+						to members of our community who otherwise would not have the financial means to
+						achieve their educational goals.
+					</p>
+				</div>
+
+				<div class="mvo-panel" id="vision">
+					<p>
+						The Juana Aguilar Galang Scholarship Foundation sees higher education as an agent
+						of change for individuals, families, and communities. We envision a society where
+						underprivileged and marginalized youth demonstrating resilience, steadfast
+						ambition, and making the most of their God-given ability achieve their life's
+						goals and become productive citizens who will serve others in their community.
+					</p>
+				</div>
+
+				<div class="mvo-panel" id="objective">
+					<p>
+						The Foundation awards scholarships to college students based on demonstrated
+						academic achievement, financial need, excellent personal character, and active
+						involvement in community service.
+						<br><br>
+						The Foundation aims to actively mentor current scholars and alumni to ensure both
+						college and post-college persistence and success. The Foundation believes we
+						have a critical role to play in guiding our scholars through challenging times
+						and providing support beyond monetary assistance.
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			const tabs = document.querySelectorAll('.mvo-tab');
+			const panels = document.querySelectorAll('.mvo-panel');
+
+			tabs.forEach(tab => {
+				tab.addEventListener('click', () => {
+					tabs.forEach(t => t.classList.remove('active'));
+					panels.forEach(p => p.classList.remove('active'));
+
+					tab.classList.add('active');
+
+					const target = tab.dataset.target;
+					document.getElementById(target).classList.add('active');
+				});
+			});
+		</script>
 	</div>
 
-	<div>
-		<h2>Our Objective</h2>
-		<p>
-			The Foundation awards scholarships to college students based on demonstrated academic
-			achievement, financial need, excellent personal character, and active involvement in
-			community service.
-		</p>
-		<p>
-			The Foundation aims to actively mentor current scholars and alumni to ensure both
-			college and post-college persistence and success. The Foundation believes we have a
-			critical role to play in guiding our scholars through the challenging times, and
-			providing support to their education beyond monetary assistance.
-		</p>
-	</div>
+	<h2>Our Partnership with Bulacan State University</h2>
+	<p>
+		Our foundation signed a memorandum of agreement with BulSU on July 29, 2025. This
+		formally established the partnership between the foundation and the university in
+		supporting deserving indigent students.
+	</p>
 
 	<div>
 		<h2>What We Provide</h2>
@@ -50,7 +91,7 @@ const pageTitle = "Juana Aguilar Galang Scholarship Foundation";
 		<div>
 			<h3>Financial Support</h3>
 			<p>
-				Scholars receive Php 18,000 per semester, distributed in biweekly payments. This
+				Scholars receive stipends distributed in biweekly payments. This
 				support helps cover daily living expenses such as transportation, meals, school
 				supplies, and other essential needs so students can focus fully on their education.
 			</p>
