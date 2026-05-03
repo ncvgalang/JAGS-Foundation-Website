@@ -1,6 +1,8 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import heroImage from '../assets/first_scholars.JPG';
+import partnershipImage from '../assets/memorandum_of_agreement_signing.JPEG';
 
 const pageTitle = "Juana Aguilar Galang Scholarship Program";
 ---
@@ -26,10 +28,10 @@ const pageTitle = "Juana Aguilar Galang Scholarship Program";
 			<div class="mvo-content">
 				<div class="mvo-panel active" id="mission">
 					<p>
-						The Juana Aguilar Galang Scholarship Foundation is based upon the conviction that
-						higher education is a right and not a privilege. The Foundation believes that
+						The Juana Aguilar Galang Scholarship Program is based upon the conviction that
+						higher education is a right and not a privilege. The Program believes that
 						education is essential to a healthy, functioning, and equitable society. It is for
-						these reasons that the foundation aims to provide access to postsecondary education
+						these reasons that the Program aims to provide access to postsecondary education
 						to members of our community who otherwise would not have the financial means to
 						achieve their educational goals.
 					</p>
@@ -37,7 +39,7 @@ const pageTitle = "Juana Aguilar Galang Scholarship Program";
 
 				<div class="mvo-panel" id="vision">
 					<p>
-						The Juana Aguilar Galang Scholarship Foundation sees higher education as an agent
+						The Juana Aguilar Galang Scholarship Program sees higher education as an agent
 						of change for individuals, families, and communities. We envision a society where
 						underprivileged and marginalized youth demonstrating resilience, steadfast
 						ambition, and making the most of their God-given ability achieve their life's
@@ -47,12 +49,12 @@ const pageTitle = "Juana Aguilar Galang Scholarship Program";
 
 				<div class="mvo-panel" id="objective">
 					<p>
-						The Foundation awards scholarships to college students based on demonstrated
+						The Program awards scholarships to college students based on demonstrated
 						academic achievement, financial need, excellent personal character, and active
 						involvement in community service.
 						<br><br>
-						The Foundation aims to actively mentor current scholars and alumni to ensure both
-						college and post-college persistence and success. The Foundation believes we
+						The Program aims to actively mentor current scholars and alumni to ensure both
+						college and post-college persistence and success. The Program believes we
 						have a critical role to play in guiding our scholars through challenging times
 						and providing support beyond monetary assistance.
 					</p>
@@ -78,18 +80,35 @@ const pageTitle = "Juana Aguilar Galang Scholarship Program";
 		</script>
 	</div>
 
-	<h2>Our Partnership with Bulacan State University</h2>
-	<p>
-		Our foundation signed a memorandum of agreement with BulSU on July 29, 2025. This
-		formally established the partnership between the foundation and the university in
-		supporting deserving indigent students.
-	</p>
+	<div class="partnership-section yellow-background">
+		<div class="partnership-text">
+			<h2>Our Partnership with Bulacan State University</h2>
+			<p>
+				The Juana Aguilar Galang Scholarship Program established a close partnership  with Bulacan
+				State University to support students in pursuing their education. The Memorandum of Agreement
+				was signed on July 31, 2025 by Dr. Teody San Andres, President of BulSU and Neil Galang,
+				Founder and Chairman of the scholarship program.
+				<br><br>
+				Guided by the belief that education is a right,
+				the Program is committed to supporting selected students of Bulacan State University, allowing
+				them to focus on their studies without the constant burden of financial concerns.
+				<br><br>
+				The Program awards scholarships based on academic performance, financial circumstances, personal
+				values, and involvement in community service. The scholarship is administered by the BulSU
+				Office of Student Financial Assistance and Scholarship office.
+			</p>
+		</div>
 
-	<div>
-		<h2>What We Provide</h2>
+		<div class="partnership-image-wrapper">
+			<Image src={partnershipImage} alt="Memorandum Signing" class="partnership-image" /> 
+		</div>
+	</div>
+
+	<div class="commitment-section">
+		<h1>OUR COMMITMENT</h1>
 		
-		<div>
-			<h3>Financial Support</h3>
+		<div class="title-left">
+			<h2>FINANCIAL SUPPORT</h2>
 			<p>
 				Scholars receive stipends distributed in biweekly payments. This
 				support helps cover daily living expenses such as transportation, meals, school
@@ -97,28 +116,33 @@ const pageTitle = "Juana Aguilar Galang Scholarship Program";
 			</p>
 		</div>
 
-		<div>
-			<h3>Mentorship & Guidance</h3>
+		<div class="title-right">
+			<h2>MENTORSHIP & GUIDANCE</h2>
 			<p>
 				We pair scholars with dedicated mentors who provide academic guidance, career advice,
 				internship support, and regular check-ins throughout the school year.
 			</p>
 		</div>
 
-		<div>
-			<h3>Leadership & Community Service</h3>
+		<div class="title-left">
+			<h2>LEADERSHIP & COMMUNITY SERVICE</h2>
 			<p>
 				Our scholars commit to school/community service each semester, developing strong
 				character, responsibility, and a heart for serving others.
 			</p>
 		</div>
 
-		<div>
-			<h3>Long-Term Commitment</h3>
+		<div class="title-right">
+			<h2>LONG-TERM COMMITMENT</h2>
 			<p>
 				We support our scholars beyond financial aid - walking alongside them through college
 				and preparing them for meaningful careers and community impact.
 			</p>
 		</div>
 	</div>
+
+	<div class="news-section yellow-background">
+		<h1>IN THE NEWS</h1>
+	</div>
+
 </BaseLayout>

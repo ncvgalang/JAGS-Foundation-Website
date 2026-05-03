@@ -291,6 +291,7 @@ button {
 	background: none;
 	color: #3f4d38;
 	cursor: pointer;
+	font-weight: bold;
 	/* padding: 0.5rem 0.75rem;
 	border: 1px solid #d1d5db;
 	background: white;
@@ -300,7 +301,8 @@ button {
 }
 
 .mvo-tab.active {
-	font-weight: bold;
+	/* font-weight: bold; */
+	text-decoration: underline;
 }
 
 .mvo-content {
@@ -318,4 +320,58 @@ button {
 
 .mvo-panel.active {
   display: block;
+}
+
+.yellow-background {
+	background-color: #e3b936;
+}
+
+.partnership-section {
+	display: flex;
+	height: 450px;
+}
+
+.partnership-text {
+	margin: 2rem 4rem;
+}
+
+.partnership-image-wrapper {
+	margin: 3rem;
+	height: 70%;
+}
+
+.partnership-image {
+	height: 100%;
+	width: auto;
+	box-shadow: -40px 30px 0px #6e8564;
+}
+
+.commitment-section {
+	margin: 2rem 5rem;
+}
+
+.commitment-section h1 {
+	color: #3f4d38;
+	text-align: center;
+	font-size: 4ch;
+}
+
+.commitment-section h2 {
+	color: #3f4d38;
+}
+
+.title-left {
+	display: flex;
+	gap: 1rem;
+	flex-direction: row;
+}
+
+.title-right {
+	display: flex;
+	gap: 2rem;
+	flex-direction: row-reverse;
+}
+
+.title-right p {
+	text-align: right;
 }
